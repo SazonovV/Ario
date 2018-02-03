@@ -1,0 +1,679 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <title>
+        Клининг
+    </title>
+
+    <head>
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" media="screen">
+        <meta charset="utf-8">
+    </head>
+    <body>
+            <div id="mask" onclick="hide_mask"></div>
+            <div class="calculate__errors" id="calculate__errors">
+                <button class="close-btn__error" onclick="document.getElementById('calculate__errors').style.display= 'none';
+                                                    document.getElementById('mask').style.display='none';
+                                                    document.getElementById('errors__text').innerHTML='';"
+                                                    >Х</button>
+                
+
+                <h2>Вы забыли указать:<br></h2>
+                <h2 id="errors__text"></h2>
+                <div class="btn-back">
+                    <button class="button-back" onclick="document.getElementById('calculate__errors').style.display= 'none';
+                    document.getElementById('mask').style.display='none';
+                    document.getElementById('errors__text').innerHTML='';">Назад</button>
+                </div>
+            </div> 
+            <div class="calc__popup" id="calc__popup">
+                <div class="calc__popup__form">
+                    <div class="form__field__title">Имя</div>
+                    <input type="text" placeholder="Иван" class="form__field__name">
+                    <div class="form__field__title">Номер телефона</div>
+                    <input type="text" placeholder="+7-999-999-99-99" class="form__field__phone">
+                </div>
+                <div class="calc__popup__text">
+                    <h3 class="cost__title">Примерная<br>стоимость:<br><span class="cost__field" id="cost"></span></h3>
+                    Свяжитесь с нами для уточнения.
+                    <div class="cost__btn">
+                        <button class="main__button">Уточнить</button>
+                    </div>
+                </div>
+                <button class="close-btn" onclick="document.getElementById('calc__popup').style.display= 'none';
+                                                    document.getElementById('mask').style.display='none';">Х</button>
+            </div>
+
+        
+
+
+
+
+        <div class="header" id="header">
+            <img src="{% static 'img/logo.png' %}" class="header__logo__image" alt="logo">
+
+            <h2 class="header__company-name">Арио</h2>    
+
+            <ul class="menu">
+                <li class="menu__element"><a href="#">Тарифы</a></li>
+                <li class="menu__element"><a href="#">Калькулятор</a></li>
+                <li class="menu__element"><a href="#">О нас</a></li>
+                <li class="menu__element"><a href="#">Личный кабинет</a></li>
+            </ul>
+
+            <h3 class="header__text">+7(495)203-03-94<br>Обратный звонок</h3>               
+
+        </div>
+
+
+        <div class="main">
+            <h1 class="main__title__h1">
+                <span class="span_title">Профессиональная уборка</span>
+                                        <br>квартир и коттеджей
+                                        <br>в Москве и МО
+            </h1>
+            
+            <div class="main__btn">
+                <button class="main__button">Посчитать стоимость</button>
+            </div>
+
+            <ul class="main__list">
+                <li class="main__list__item">Вежливые и пунктуальные уборщицы</li>
+                <li class="main__list__item">Уборка в день заказа</li>
+                <li class="main__list__item">Экологичные моющие средства</li>
+            </ul>
+            
+            <a href class="play__link">
+                <span class="play__circle"></span>
+                <span class="play__circle-orange"></span>
+            </a>
+        </div>
+
+        <div class="advantages">
+            <div class="advantages__title">
+                Наши преимущества
+                <div class="yellow-line"></div>
+            </div>
+
+                <div class="advantage">
+                    <div class="advantage__logo">
+                        <img src="{% static "img/adv1.png" %}"alt="adv1"  class="adv-img">
+                    </div>
+                    <div class="advantage__title">
+                        СВЕЖИЕ ИДЕИ
+                    </div>
+                    <div class="advantage__text">
+                            Работая с нами, вы можете быть уверены, что мы найдем лучшее и наиболее оригинальное решение именно для вас!
+                    </div>
+                </div>
+
+                <div class="advantage">
+                    <div class="advantage__logo">
+                        <img src="{% static "img/adv1.png" %}" alt="adv1" class="adv-img">
+                    </div>
+                    <div class="advantage__title">
+                            СВЕЖИЕ ИДЕИ
+                    </div>
+                    <div class="advantage__text">
+                            Работая с нами, вы можете быть уверены, что мы найдем лучшее и наиболее оригинальное решение именно для вас!
+                    </div>
+                </div>
+
+                <div class="advantage">
+                    <div class="advantage__logo">
+                        <img src="{% static "img/adv1.png" %}" alt="adv1"  class="adv-img">
+                    </div>
+                    <div class="advantage__title">
+                            СВЕЖИЕ ИДЕИ
+                    </div>
+
+                    <div class="advantage__text">
+                        Работая с нами, вы можете быть уверены, что мы найдем лучшее и наиболее оригинальное решение именно для вас!
+                    </div>
+                </div>
+
+        </div>
+
+        <div class="before-after">
+                <div class="before-after__title">
+                        Результаты нашей работы
+                        <div class="yellow-line"></div>
+                </div>
+
+                <div class="one"><img class="b-a__big_img" src="{% static "img/kl.jpg" %}" alt="img1_b.jpg"></div>
+
+                <div class="two"><img class="b-a__small_img" src="{% static "img/kl.jpg" %}" ></div>
+
+                        
+                <div class="three"><img class="b-a__small_img" src="{% static "img/kl.jpg" %}" ></div>
+
+                      
+                <div class="four"><img class="b-a__small_img" src="{% static "img/kl.jpg" %}" ></div>
+                      
+                <div class="five"><img class="b-a__small_img" src="{% static "img/kl.jpg" %}" ></div>
+                           
+                <div class="six"><img class="b-a__big_img" src="{% static "img/kl.jpg" %}" ></div>
+                
+                <div class="seven"><img class="b-a__big_img" src="{% static "img/kl.jpg" %}" ></div>
+                           
+                <div class="eight"><img class="b-a__small_img" src="{% static "img/kl.jpg" %}" ></div>
+                          
+                <div class="nine"><img class="b-a__small_img" src="{% static "img/kl.jpg" %}" ></div>
+
+                
+        </div>
+
+        <div class="rates">
+                <div class="rates__title">
+                        Тарифы
+                        <div class="yellow-line"></div>
+                        <div class="rates__title2">Выберите подходящую вам уборку</div>
+                </div>
+                <div class="rates__block">
+                <div class="cleaning__border">
+                    <div class="cleaning__item">
+                        <div class="cleaning__item__title">
+                                Стандарт уборка  
+                        </div>
+                        <hr>
+                        <div class="cleaning__item__cost">
+                                <h3><b>От 1490 Р</b></h3>
+                        </div>
+                        
+                        <ul class="cleaning__item__list">
+                            <div class="cleaning__item__list__title">Входит в уборку:
+                            </div>
+                            <li class="cleaning__item__list__item">
+                                Влажная уборка пола
+                            </li>
+                            <li class="cleaning__item__list__item">
+                                Уборка внешних поверхностей
+                            </li>
+                            <li class="cleaning__item__list__item">
+                                Изменение стилей
+                            </li>
+                            <li class="cleaning__item__list__item">
+                                Уборка внешних поверхностей
+                            </li>
+                            <li class="cleaning__item__list__item">
+                                    Редактирование кода
+                            </li>
+                            <li class="cleaning__item__list__item">
+                                Редактирование кода
+                            </li>
+                        </ul>
+
+                        <div class="cleaning__item__btn-order">
+                            <button class="btn_order">
+                                Заказать
+                            </button>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="cleaning__border">
+                        <div class="cleaning__item">
+                            <div class="cleaning__item__title">
+                                    Стандарт уборка  
+                            </div>
+                            <hr>
+                            <div class="cleaning__item__cost">
+                                    <h3>От 1490 Р</h3>
+                            </div>
+                            
+                            <ul class="cleaning__item__list">
+                                <div class="cleaning__item__list__title">Входит в уборку:
+                                </div>
+                                <li class="cleaning__item__list__item">
+                                    Влажная уборка пола
+                                </li>
+                                <li class="cleaning__item__list__item">
+                                    Уборка внешних поверхностей
+                                </li>
+                                <li class="cleaning__item__list__item">
+                                    Изменение стилей
+                                </li>
+                                <li class="cleaning__item__list__item">
+                                    Уборка внешних поверхностей
+                                </li>
+                                <li class="cleaning__item__list__item">
+                                        Редактирование кода
+                                </li>
+                                <li class="cleaning__item__list__item">
+                                    Редактирование кода
+                                </li>
+                            </ul>
+    
+                            <div class="cleaning__item__btn-order">
+                                <button class="btn_order">
+                                    Заказать
+                                </button>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+
+                    <div class="cleaning__border">
+                            <div class="cleaning__item">
+                                <div class="cleaning__item__title">
+                                        Стандарт уборка  
+                                </div>
+                                <hr>
+                                <div class="cleaning__item__cost">
+                                        <h3>От 1490 Р</h3>
+                                </div>
+                                
+                                <ul class="cleaning__item__list">
+                                    <div class="cleaning__item__list__title">Входит в уборку:
+                                    </div>
+                                    <li class="cleaning__item__list__item">
+                                        Влажная уборка пола
+                                    </li>
+                                    <li class="cleaning__item__list__item">
+                                        Уборка внешних поверхностей
+                                    </li>
+                                    <li class="cleaning__item__list__item">
+                                        Изменение стилей
+                                    </li>
+                                    <li class="cleaning__item__list__item">
+                                        Уборка внешних поверхностей
+                                    </li>
+                                    <li class="cleaning__item__list__item">
+                                            Редактирование кода
+                                    </li>
+                                    <li class="cleaning__item__list__item">
+                                        Редактирование кода
+                                    </li>
+                                </ul>
+        
+                                <div class="cleaning__item__btn-order">
+                                    <button class="btn_order">
+                                        Заказать
+                                    </button>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+            </div>
+        </div>
+
+        <div class="calculate">
+            <div class="calculator" id="calculator">
+                <div class="calculator__list-clean" id="type">
+                        <h3 "type_errors">Вид уборки:</h3>
+                        <div class="clean__elem">
+                                <button class="clean-item" value="1" id="t1">Стандарт</button>
+                            </div>
+                            <div class="clean__elem">
+                                    <button class="clean-item" value="2" id="t2">Премиум</button>
+                            </div>
+                            <div class="clean__elem">
+                                    <button class="clean-item" value="3" id="t3">VIP</button>
+                            </div>
+
+                </div>
+
+                
+                <div class="calculator__rooms" id="rooms">
+                    <h3 id="rooms_errors">Количество комнат:</h3>
+                    <div class="rooms__elem">
+                        <button class="rooms" value="1" id="r1">1</button>
+                    </div>
+                    <div class="rooms__elem">
+                        <button class="rooms" value="2" id="r2">2</button>
+                    </div>
+                    <div class="rooms__elem">
+                        <button class="rooms" value="3" id="r3">3</button>
+                    </div>
+
+                    <div class="rooms__elem">
+                            <button class="rooms" value="4" id="r4">4</button>
+                    </div>
+
+                    <div class="rooms__elem">
+                            <button class="rooms" value="5" id="r5">5</button>
+                    </div>
+                    <input class="calc_input" placeholder="Введите количество комнат" id = "rooms_input" onfocus="hide_pressed_r()" onfocusout="set_rooms()" oninput="delete_char(id)">
+
+                </div>
+
+                <div onclick="open__opts('opts')" class="list-options"><img src="{% static "img/arr_down.png" %}" class="list_arr"><h3>Дополнительные услуги:</h3></div>
+                <div class="calculator__add-options" id="opts" style="display: none">
+                        <div class="add-options__elem">
+                            <button class="options" value="1" id="o1">Чистка</button>
+                        </div>
+                        <div class="add-options__elem">
+                                <button class="options" value="2" id="o2">Мойка</button>
+                        </div>
+                        <div class="add-options__elem">
+                                <button class="options" value="3" id="o3">Банька</button>
+                        </div>
+                </div>
+
+                <div class="btn-calc">
+                    <button class="button-calculate" id="btn-calcute" onclick="calculate()">Посчитать!</button>
+                </div>
+            </div>
+
+            <div class="calculate__title">
+                    Узнайте примерную<br> стоимость уборки,<br>используя наш калькулятор.
+            <div class="black-line"></div>
+            </div>
+
+            
+        </div>
+
+        <div class="feedback">
+            <div class="feedback__title">
+                Остались вопросы?
+                <div class="yellow-line"></div>
+            </div>
+
+            <div class="feedback__block">
+                <div class="man_logo"><img src="{% static "img/manager.png" %}" class="feedback__block__manager__logo"></div>
+                <div class="feedback__block__text">Хотите уточнить подробности <br>или рассчитать стоимость?</div>
+                <div class="feedback__form__container">
+                    <h3 class="feedback__form__container__title">Оставьте заявку <br>и мы перезвоним<br>в течение 30 минут.</h3>
+                <div class="feedback__form">
+                        <div class="feedback__form__title">Имя</div>
+                        <input type="text" placeholder="Иван" class="feedback__form__name">
+                        <div class="feedback__form__title">Номер телефона</div>
+                        <input type="text" placeholder="+7-999-999-99-99" class="feedback__form__phone">
+                        <div class="feedback__form__btn">
+                            <button class="feedback__button">Отправить</button>
+                        </div>
+                        
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="reviews">
+            <div class="reviews__title">
+                Отзывы наших клиентов:
+                <div class="yellow-line"></div>
+            </div>
+
+            <div class="review__item">
+                <div class="review__item__reviewer-name">Василий</div>
+                <div class="review__item__text">
+                        В целом всё помыли отлично, но когда я нашел пыль на 
+                        одной из полок - извинились и протёрли её, вдобавок 
+                        девушки сами ещё раз обошли всю квартиру в поисках недочётов.
+                </div>
+                <div class="yellow-line"></div>
+                <div class="review__item__and">
+                    Отзыв написан непосредственно со слов клиента, разрешение на публикацию отзыва получено.
+                </div>
+            </div>
+
+            <div class="review__item">
+                <div class="review__item__reviewer-name">Василий</div>
+                <div class="review__item__text">
+                            В целом всё помыли отлично, но когда я нашел пыль на 
+                            одной из полок - извинились и протёрли её, вдобавок 
+                            девушки сами ещё раз обошли всю квартиру в поисках недочётов.
+                </div>
+
+                <div class="yellow-line"></div>
+                    <div class="review__item__and">
+                        Отзыв написан непосредственно со слов клиента, разрешение на публикацию отзыва получено.
+                    </div>
+            </div>
+
+            
+            <div class="review__item">
+                <div class="review__item__reviewer-name">Василий</div>
+                <div class="review__item__text">
+                                В целом всё помыли отлично, но когда я нашел пыль на 
+                                одной из полок - извинились и протёрли её, вдобавок 
+                                девушки сами ещё раз обошли всю квартиру в поисках недочётов.
+                </div>
+
+                <div class="yellow-line"></div>
+                        
+                <div class="review__item__and">
+                            Отзыв написан непосредственно со слов клиента, разрешение на публикацию отзыва получено.
+                </div>
+            </div>
+
+
+            <div class="review__item">
+                <div class="review__item__reviewer-name">Василий</div>
+                        
+                <div class="review__item__text">
+                                    В целом всё помыли отлично, но когда я нашел пыль на 
+                                    одной из полок - извинились и протёрли её, вдобавок 
+                                    девушки сами ещё раз обошли всю квартиру в поисках недочётов.
+                </div>
+                        
+                <div class="yellow-line"></div>
+                            
+                <div class="review__item__and">
+                                Отзыв написан непосредственно со слов клиента, разрешение на публикацию отзыва получено.
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div class="footer__developer">
+                <img src="{% static "img/dev-logo.png" %}" alt="developer-logo" class="developer__logo">
+                <div class="developer__text">Создано в говне<br>говном напичкано</div>
+            </div>
+
+            <div class="social-networks">
+                <div><a href="vk.com"><img src="{% static "img/vk-logo.png" %}" class="social-network" alt="vk-logo"></a></div>
+                <div><a href="facebook.com"><img src="{% static "img/fb-logo.png" %}" class="social-network" alt="fb-logo"></a></div>
+                <div><a href="instagram.com"><img src="{% static "img/inst-logo.png" %}" class="social-network" alt="inst-logo"></a></div>
+            </div>
+
+            <div class="contacts">
+                <div class="contact">+7(999)-999-99-99</div>
+                <div class="contact">arioclean@mail.ru</div>
+                <div class="contact">Узуново, д.1, стр.3, оф. 441, эт. 440</div>
+            </div>
+
+            <div class="subscribe">
+                <div class="subsc__text">
+                    Введите ваш email,<br>чтобы быть в курсе обновлений
+                </div>
+                <input type="text" class="email-input" placeholder="e-mail">
+                <div class="btn-sbsc">
+                    <button class="button-sbsc">Подписаться</button>
+                </div>
+                
+            </div>
+        </div>
+
+    </body>
+    <script>
+
+        function open__opts(opts) {
+            let opt = document.getElementById(opts);
+            let calc = document.getElementById("calculator");
+            if(opt.style.display == "none") {
+                opt.style.display = "block";
+                calc.style.height = "750px";
+                
+            } else {
+                opt.style.display = "none";
+                calc.style.height = "470px";
+            }
+        }
+        let mask = document.getElementById("mask");
+        mask.onclick = function(){
+            mask.style.display = "none";
+            let popup = document.getElementById("calc__popup");
+            popup.style.display = "none";
+            document.getElementById('calculate__errors').style.display= 'none';
+            document.getElementById('errors__text').innerHTML='';
+        }
+        
+        var type_of_clean = 0;
+        var options = {
+            o1:0,
+            o2:0,
+            o3:0,
+        }
+        var windows = 0;
+        var rooms = 0;
+
+
+        function delete_char(id) {
+            var inp = document.getElementById(id);
+            if(isNaN(inp.value.charAt(inp.value.length-1))){
+                inp.value = inp.value.substr(0, inp.value.length-1);
+            }
+        }
+
+        function hide_pressed_w() {
+            winds = document.getElementsByClassName("windows-pressed");
+            len = winds.length;
+            for(var i = 0; i < len; i++) {
+                winds[i].className = "windows";
+            }
+        }
+
+        function set_windows() {
+            windows = +document.getElementById("wind_input").value;
+        }
+
+        function hide_pressed_r() {
+            rs = document.getElementsByClassName("rooms-pressed");
+            len = rs.length;
+            for(var i = 0; i < len; i++) {
+                rs[i].className = "rooms";
+            }
+        }
+
+        function set_rooms() {
+            rooms = +document.getElementById("rooms_input").value;
+        }
+        
+        
+        calculator = document.getElementById("calculator");
+        calculator.onclick = function(event) {
+            var target = event.target;
+            if(target.tagName != 'BUTTON' || target.id == "btn-calcute") return;
+            if(~target.className.indexOf("options")) {
+                highlight_option(target);
+            } else {
+                highlight(target);
+            }        
+        }
+
+        function highlight(node) {
+            
+            if(!~node.className.indexOf("pressed")) {
+                var selected = document.getElementsByClassName(node.className + "-pressed");
+                var len = selected.length;
+                for(var i=0;i<len;i++){
+                    selected[i].className = selected[i].className.replace("-pressed", "");
+                }
+                node.className += "-pressed";
+                setValue(node);
+            }
+            else return;
+        }
+
+        function setValue(element){
+            if(~element.className.indexOf("clean-item")) type_of_clean = element.value;
+            if(~element.className.indexOf("rooms")) {
+                document.getElementById("rooms_input").value = "";
+                rooms = element.value;
+            }
+            if(~element.className.indexOf("windows")) {
+                document.getElementById("wind_input").value = "";
+                windows = element.value;
+            }
+        }
+
+        function highlight_option(node) {
+            if (node.className === "options-pressed") {
+                node.className = "options";
+                options[node.id] = 0;
+            } else {
+                node.className = "options-pressed";
+                options[node.id] = node.value;
+            }          
+        }
+
+
+
+
+        function calculate(){
+            
+            if( rooms ===0 || type_of_clean == 0){
+                
+                document.getElementById("mask").style.display = "block"
+                document.getElementById("calculate__errors").style.display = "block";
+                var errs = document.getElementById("errors__text");
+                if(type_of_clean == 0) {
+                    errs.innerHTML += "тип уборки <div class='yellow-line'></div>";
+                }
+                if(rooms == 0) {
+                    errs.innerHTML += "<br>количество комнат <div class='yellow-line'></div>";
+                }
+                //if(windows == 0 ) {
+                 //   errs.innerHTML += "<br>количество окон <div class='yellow-line'></div>";
+                //}
+                return;
+            } else {
+                var room = document.getElementById("r"+rooms);
+            if(room){
+                room.className = "rooms";
+            }
+            var type = document.getElementById("t"+type_of_clean);
+            if(type){   
+                type.className = "clean-item";
+            }
+            var wnd = document.getElementById("w"+windows);
+            if(wnd){
+                wnd.className = "windows";
+            }
+            var opt = document.getElementsByClassName("options-pressed");
+            var len = opt.length;
+            for(var i=0; i<len; i++){
+                if(opt[i]){
+                opt[i].className = "options";
+                }
+            }
+                //Накладываем маску
+            document.getElementById("mask").style.display = "block";
+            //mask.style.display = "block";
+            document.getElementById("calc__popup").style.display = "block";;
+            //popup.style.display = "block";
+            document.getElementById("cost").innerText = "Тут будет стоимость!!!";
+            //cost.innerText = "Тут будет стоимость!!!";
+            }
+
+
+
+
+
+
+            alert("Тип уборки - " + type_of_clean+"\nКоличество комнат - "+rooms+"\nКоличество окон - " + windows+"\n"+"Доп. опции"+options.o1+" "+options.o2+" "+options.o3+"\n");
+        }         
+        
+
+        let header = document.getElementById("header");
+        var html = document.documentElement;
+        document.onscroll = function() {
+            if (window.scrollY < 450) {
+                header.style.backgroundColor = "transparent";
+                header.style.opacity = "1";
+            } else {
+                onTop = false;
+                header.style.backgroundColor = "black";
+                for(var i=1; i<8; i++){
+                header.style.opacity = "0."+ i;
+                }
+            }
+            //alert("Вы уже прокрутили "+ window.scrollY +"px этой страницы");
+        }
+    </script>
+</html>
