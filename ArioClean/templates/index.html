@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html>
     <title>
@@ -6,7 +5,7 @@
     </title>
 
     <head>
-        <link href="{% static 'css/styles.css' %}" rel="stylesheet" media="screen">
+        <link rel="stylesheet" href="css/styles.css">
         <meta charset="utf-8">
     </head>
     <body>
@@ -18,8 +17,8 @@
                                                     >Х</button>
                 
 
-                <h2>Вы забыли указать:<br></h2>
-                <h2 id="errors__text"></h2>
+                <h2 style="font-size:1.8vw">Вы забыли указать:<br></h2>
+                <h2 id="errors__text" style="font-size:1.5vw"></h2>
                 <div class="btn-back">
                     <button class="button-back" onclick="document.getElementById('calculate__errors').style.display= 'none';
                     document.getElementById('mask').style.display='none';
@@ -36,10 +35,11 @@
                 <div class="calc__popup__text">
                     <h3 class="cost__title">Примерная<br>стоимость:<br><span class="cost__field" id="cost"></span></h3>
                     Свяжитесь с нами для уточнения.
-                    <div class="cost__btn">
-                        <button class="main__button">Уточнить</button>
+                    <div class="button__container" style="margin-top: 5vw;">
+                        <button class="button">Уточнить</button>
                     </div>
-                </div>
+
+            </div>
                 <button class="close-btn" onclick="document.getElementById('calc__popup').style.display= 'none';
                                                     document.getElementById('mask').style.display='none';">Х</button>
             </div>
@@ -50,17 +50,15 @@
 
 
         <div class="header" id="header">
-            <img src="{% static 'img/logo.png' %}" class="header__logo__image" alt="logo">
+
+            <img src="logo.png" class="header__logo__image" alt="logo">
 
             <h2 class="header__company-name">Арио</h2>    
-
-            <ul class="menu">
-                <li class="menu__element"><a href="#">Тарифы</a></li>
-                <li class="menu__element"><a href="#">Калькулятор</a></li>
-                <li class="menu__element"><a href="#">О нас</a></li>
-                <li class="menu__element"><a href="#">Личный кабинет</a></li>
-            </ul>
-
+            <div class="menu__element"><a href="#">Тарифы</a></div>
+            <div class="menu__element"><a href="#">Калькулятор</a></div>
+            <div class="menu__element"><a href="#">О нас</a></div>
+            <div class="menu__element"><a href="#">Личный кабинет</a></div>
+            
             <h3 class="header__text">+7(495)203-03-94<br>Обратный звонок</h3>               
 
         </div>
@@ -73,8 +71,8 @@
                                         <br>в Москве и МО
             </h1>
             
-            <div class="main__btn">
-                <button class="main__button">Посчитать стоимость</button>
+            <div class="main__button button__container">
+                <button class="button">Посчитать стоимость</button>
             </div>
 
             <ul class="main__list">
@@ -90,14 +88,14 @@
         </div>
 
         <div class="advantages">
-            <div class="advantages__title">
+            <div class="block__title-black advantages__title">
                 Наши преимущества
                 <div class="yellow-line"></div>
             </div>
 
                 <div class="advantage">
                     <div class="advantage__logo">
-                        <img src="{% static "img/adv1.png" %}"alt="adv1"  class="adv-img">
+                        <img src="adv1.png" alt="adv1"  class="adv-img">
                     </div>
                     <div class="advantage__title">
                         СВЕЖИЕ ИДЕИ
@@ -109,7 +107,7 @@
 
                 <div class="advantage">
                     <div class="advantage__logo">
-                        <img src="{% static "img/adv1.png" %}" alt="adv1" class="adv-img">
+                        <img src="adv1.png" alt="adv1" class="adv-img">
                     </div>
                     <div class="advantage__title">
                             СВЕЖИЕ ИДЕИ
@@ -121,7 +119,7 @@
 
                 <div class="advantage">
                     <div class="advantage__logo">
-                        <img src="{% static "img/adv1.png" %}" alt="adv1"  class="adv-img">
+                        <img src="adv1.png" alt="adv1"  class="adv-img">
                     </div>
                     <div class="advantage__title">
                             СВЕЖИЕ ИДЕИ
@@ -135,36 +133,36 @@
         </div>
 
         <div class="before-after">
-                <div class="before-after__title">
+                <div class="block__title-white before-after__title">
                         Результаты нашей работы
                         <div class="yellow-line"></div>
                 </div>
 
-                <div class="one"><img class="b-a__big_img" src="{% static "img/kl.jpg" %}" alt="img1_b.jpg"></div>
+                <div class="one"><img class="b-a__big_img" src="./kl.jpg" alt="img1_b.jpg"></div>
 
-                <div class="two"><img class="b-a__small_img" src="{% static "img/kl.jpg" %}" ></div>
+                <div class="two"><img class="b-a__small_img" src="./kl.jpg"></div>
 
                         
-                <div class="three"><img class="b-a__small_img" src="{% static "img/kl.jpg" %}" ></div>
+                <div class="three"><img class="b-a__small_img" src="./kl.jpg"></div>
 
                       
-                <div class="four"><img class="b-a__small_img" src="{% static "img/kl.jpg" %}" ></div>
+                <div class="four"><img class="b-a__small_img" src="./kl.jpg"></div>
                       
-                <div class="five"><img class="b-a__small_img" src="{% static "img/kl.jpg" %}" ></div>
+                <div class="five"><img class="b-a__small_img" src="./kl.jpg"></div>
                            
-                <div class="six"><img class="b-a__big_img" src="{% static "img/kl.jpg" %}" ></div>
+                <div class="six"><img class="b-a__big_img" src="./kl.jpg"></div>
                 
-                <div class="seven"><img class="b-a__big_img" src="{% static "img/kl.jpg" %}" ></div>
+                <div class="seven"><img class="b-a__big_img" src="./kl.jpg"></div>
                            
-                <div class="eight"><img class="b-a__small_img" src="{% static "img/kl.jpg" %}" ></div>
+                <div class="eight"><img class="b-a__small_img" src="./kl.jpg"></div>
                           
-                <div class="nine"><img class="b-a__small_img" src="{% static "img/kl.jpg" %}" ></div>
+                <div class="nine"><img class="b-a__small_img" src="./kl.jpg"></div>
 
                 
         </div>
 
         <div class="rates">
-                <div class="rates__title">
+                <div class="block__title-black rates__title">
                         Тарифы
                         <div class="yellow-line"></div>
                         <div class="rates__title2">Выберите подходящую вам уборку</div>
@@ -203,8 +201,8 @@
                             </li>
                         </ul>
 
-                        <div class="cleaning__item__btn-order">
-                            <button class="btn_order">
+                        <div class="button__container">
+                            <button class="button">
                                 Заказать
                             </button>
                         </div>
@@ -245,11 +243,11 @@
                                 </li>
                             </ul>
     
-                            <div class="cleaning__item__btn-order">
-                                <button class="btn_order">
-                                    Заказать
-                                </button>
-                            </div>
+                            <div class="button__container">
+                                    <button class="button">
+                                        Заказать
+                                    </button>
+                                </div>
                             
                         </div>
                     </div>
@@ -288,8 +286,8 @@
                                     </li>
                                 </ul>
         
-                                <div class="cleaning__item__btn-order">
-                                    <button class="btn_order">
+                                <div class="button__container">
+                                    <button class="button">
                                         Заказать
                                     </button>
                                 </div>
@@ -303,7 +301,7 @@
         <div class="calculate">
             <div class="calculator" id="calculator">
                 <div class="calculator__list-clean" id="type">
-                        <h3 "type_errors">Вид уборки:</h3>
+                        <h3 "type_errors" style="font-size:2vw">Вид уборки:</h3>
                         <div class="clean__elem">
                                 <button class="clean-item" value="1" id="t1">Стандарт</button>
                             </div>
@@ -318,7 +316,7 @@
 
                 
                 <div class="calculator__rooms" id="rooms">
-                    <h3 id="rooms_errors">Количество комнат:</h3>
+                    <h3 id="rooms_errors" style="font-size:2vw">Количество комнат:</h3>
                     <div class="rooms__elem">
                         <button class="rooms" value="1" id="r1">1</button>
                     </div>
@@ -340,7 +338,7 @@
 
                 </div>
 
-                <div onclick="open__opts('opts')" class="list-options"><img src="{% static "img/arr_down.png" %}" class="list_arr"><h3>Дополнительные услуги:</h3></div>
+                <div onclick="open__opts('opts')" class="list-options"><img src="./arr_down.png" class="list_arr"><h3 style="font-size:2vw">Дополнительные услуги:</h3></div>
                 <div class="calculator__add-options" id="opts" style="display: none">
                         <div class="add-options__elem">
                             <button class="options" value="1" id="o1">Чистка</button>
@@ -353,12 +351,12 @@
                         </div>
                 </div>
 
-                <div class="btn-calc">
-                    <button class="button-calculate" id="btn-calcute" onclick="calculate()">Посчитать!</button>
+                <div class="button__container">
+                    <button class="button" id="btn-calcute" onclick="calculate()">Посчитать!</button>
                 </div>
             </div>
 
-            <div class="calculate__title">
+            <div class="calculate__title block__title-black">
                     Узнайте примерную<br> стоимость уборки,<br>используя наш калькулятор.
             <div class="black-line"></div>
             </div>
@@ -367,13 +365,13 @@
         </div>
 
         <div class="feedback">
-            <div class="feedback__title">
+            <div class="feedback__title block__title-black">
                 Остались вопросы?
                 <div class="yellow-line"></div>
             </div>
 
             <div class="feedback__block">
-                <div class="man_logo"><img src="{% static "img/manager.png" %}" class="feedback__block__manager__logo"></div>
+                <div class="man_logo"><img src="./manager.png" class="feedback__block__manager__logo"></div>
                 <div class="feedback__block__text">Хотите уточнить подробности <br>или рассчитать стоимость?</div>
                 <div class="feedback__form__container">
                     <h3 class="feedback__form__container__title">Оставьте заявку <br>и мы перезвоним<br>в течение 30 минут.</h3>
@@ -382,8 +380,8 @@
                         <input type="text" placeholder="Иван" class="feedback__form__name">
                         <div class="feedback__form__title">Номер телефона</div>
                         <input type="text" placeholder="+7-999-999-99-99" class="feedback__form__phone">
-                        <div class="feedback__form__btn">
-                            <button class="feedback__button">Отправить</button>
+                        <div class="button__container">
+                            <button class="button">Отправить</button>
                         </div>
                         
                 </div>
@@ -392,7 +390,7 @@
         </div>
 
         <div class="reviews">
-            <div class="reviews__title">
+            <div class="reviews__title block__title-white">
                 Отзывы наших клиентов:
                 <div class="yellow-line"></div>
             </div>
@@ -461,14 +459,14 @@
 
         <div class="footer">
             <div class="footer__developer">
-                <img src="{% static "img/dev-logo.png" %}" alt="developer-logo" class="developer__logo">
+                <img src="./dev-logo.png" alt="developer-logo" class="developer__logo">
                 <div class="developer__text">Создано в говне<br>говном напичкано</div>
             </div>
 
             <div class="social-networks">
-                <div><a href="vk.com"><img src="{% static "img/vk-logo.png" %}" class="social-network" alt="vk-logo"></a></div>
-                <div><a href="facebook.com"><img src="{% static "img/fb-logo.png" %}" class="social-network" alt="fb-logo"></a></div>
-                <div><a href="instagram.com"><img src="{% static "img/inst-logo.png" %}" class="social-network" alt="inst-logo"></a></div>
+                <div><a href="vk.com"><img src="./vk-logo.png" class="social-network" alt="vk-logo"></a></div>
+                <div><a href="facebook.com"><img src="./fb-logo.png" class="social-network" alt="fb-logo"></a></div>
+                <div><a href="instagram.com"><img src="./inst-logo.png" class="social-network" alt="inst-logo"></a></div>
             </div>
 
             <div class="contacts">
@@ -497,11 +495,11 @@
             let calc = document.getElementById("calculator");
             if(opt.style.display == "none") {
                 opt.style.display = "block";
-                calc.style.height = "750px";
+                calc.style.height = "90%";
                 
             } else {
                 opt.style.display = "none";
-                calc.style.height = "470px";
+                calc.style.height = "";
             }
         }
         let mask = document.getElementById("mask");
@@ -613,10 +611,10 @@
                 document.getElementById("calculate__errors").style.display = "block";
                 var errs = document.getElementById("errors__text");
                 if(type_of_clean == 0) {
-                    errs.innerHTML += "тип уборки <div class='yellow-line'></div>";
+                    errs.innerHTML += "<br>тип уборки <div class='yellow-line'></div>";
                 }
                 if(rooms == 0) {
-                    errs.innerHTML += "<br>количество комнат <div class='yellow-line'></div>";
+                    errs.innerHTML += "<br><br>количество комнат <div class='yellow-line'></div>";
                 }
                 //if(windows == 0 ) {
                  //   errs.innerHTML += "<br>количество окон <div class='yellow-line'></div>";
