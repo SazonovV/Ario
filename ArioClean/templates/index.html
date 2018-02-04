@@ -5,7 +5,7 @@
     </title>
 
     <head>
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="{% static "css/styles.css" %}">
         <meta charset="utf-8">
     </head>
     <body>
@@ -51,7 +51,7 @@
 
         <div class="header" id="header">
 
-            <img src="logo.png" class="header__logo__image" alt="logo">
+            <img src="{% static "img/logo.png" %}"class="header__logo__image" alt="logo">
 
             <h2 class="header__company-name">Арио</h2>    
             <div class="menu__element"><a href="#">Тарифы</a></div>
@@ -95,7 +95,7 @@
 
                 <div class="advantage">
                     <div class="advantage__logo">
-                        <img src="adv1.png" alt="adv1"  class="adv-img">
+                        <img src="{% static "img/adv1.png" %}" alt="adv1"  class="adv-img">
                     </div>
                     <div class="advantage__title">
                         СВЕЖИЕ ИДЕИ
@@ -107,7 +107,7 @@
 
                 <div class="advantage">
                     <div class="advantage__logo">
-                        <img src="adv1.png" alt="adv1" class="adv-img">
+                        <img src="{% static "img/adv1.png" %}" alt="adv1" class="adv-img">
                     </div>
                     <div class="advantage__title">
                             СВЕЖИЕ ИДЕИ
@@ -119,7 +119,7 @@
 
                 <div class="advantage">
                     <div class="advantage__logo">
-                        <img src="adv1.png" alt="adv1"  class="adv-img">
+                        <img src="{% static "img/adv1.png" %}" alt="adv1"  class="adv-img">
                     </div>
                     <div class="advantage__title">
                             СВЕЖИЕ ИДЕИ
@@ -138,25 +138,25 @@
                         <div class="yellow-line"></div>
                 </div>
 
-                <div class="one"><img class="b-a__big_img" src="./kl.jpg" alt="img1_b.jpg"></div>
+                <div class="one"><img class="b-a__big_img" src="{% static "img/kl.jpg" %} "alt="img1_b.jpg"></div>
 
-                <div class="two"><img class="b-a__small_img" src="./kl.jpg"></div>
+                <div class="two"><img class="b-a__small_img" src="{% static "img/kl.jpg" %} ></div>
 
                         
-                <div class="three"><img class="b-a__small_img" src="./kl.jpg"></div>
+                <div class="three"><img class="b-a__small_img" src="{% static "img/kl.jpg" %} ></div>
 
                       
-                <div class="four"><img class="b-a__small_img" src="./kl.jpg"></div>
+                <div class="four"><img class="b-a__small_img" src="{% static "img/kl.jpg" %} ></div>
                       
-                <div class="five"><img class="b-a__small_img" src="./kl.jpg"></div>
+                <div class="five"><img class="b-a__small_img" src="{% static "img/kl.jpg" %} ></div>
                            
-                <div class="six"><img class="b-a__big_img" src="./kl.jpg"></div>
+                <div class="six"><img class="b-a__big_img" src="{% static "img/kl.jpg" %} ></div>
                 
-                <div class="seven"><img class="b-a__big_img" src="./kl.jpg"></div>
+                <div class="seven"><img class="b-a__big_img" src="{% static "img/kl.jpg" %} ></div>
                            
-                <div class="eight"><img class="b-a__small_img" src="./kl.jpg"></div>
+                <div class="eight"><img class="b-a__small_img" src="{% static "img/kl.jpg" %} ></div>
                           
-                <div class="nine"><img class="b-a__small_img" src="./kl.jpg"></div>
+                <div class="nine"><img class="b-a__small_img" src="{% static "img/kl.jpg" %} ></div>
 
                 
         </div>
@@ -338,7 +338,7 @@
 
                 </div>
 
-                <div onclick="open__opts('opts')" class="list-options"><img src="./arr_down.png" class="list_arr"><h3 style="font-size:2vw">Дополнительные услуги:</h3></div>
+                <div onclick="open__opts('opts')" class="list-options"><img src="{% static "img/arr_down.png" %} class="list_arr"><h3 style="font-size:2vw">Дополнительные услуги:</h3></div>
                 <div class="calculator__add-options" id="opts" style="display: none">
                         <div class="add-options__elem">
                             <button class="options" value="1" id="o1">Чистка</button>
@@ -371,7 +371,7 @@
             </div>
 
             <div class="feedback__block">
-                <div class="man_logo"><img src="./manager.png" class="feedback__block__manager__logo"></div>
+                <div class="man_logo"><img src="{% static "img/manager.png" %} class="feedback__block__manager__logo"></div>
                 <div class="feedback__block__text">Хотите уточнить подробности <br>или рассчитать стоимость?</div>
                 <div class="feedback__form__container">
                     <h3 class="feedback__form__container__title">Оставьте заявку <br>и мы перезвоним<br>в течение 30 минут.</h3>
@@ -459,14 +459,14 @@
 
         <div class="footer">
             <div class="footer__developer">
-                <img src="./dev-logo.png" alt="developer-logo" class="developer__logo">
+                <img src="{% static "img/dev-logo.png" %}  alt="developer-logo" class="developer__logo">
                 <div class="developer__text">Создано в говне<br>говном напичкано</div>
             </div>
 
             <div class="social-networks">
-                <div><a href="vk.com"><img src="./vk-logo.png" class="social-network" alt="vk-logo"></a></div>
-                <div><a href="facebook.com"><img src="./fb-logo.png" class="social-network" alt="fb-logo"></a></div>
-                <div><a href="instagram.com"><img src="./inst-logo.png" class="social-network" alt="inst-logo"></a></div>
+                <div><a href="vk.com"><img src="{% static "img/vk-logo.png" %} class="social-network" alt="vk-logo"></a></div>
+                <div><a href="facebook.com"><"{% static "img/fb-logo.png" %} class="social-network" alt="fb-logo"></a></div>
+                <div><a href="instagram.com"><"{% static "img/inst-logo.png" %} class="social-network" alt="inst-logo"></a></div>
             </div>
 
             <div class="contacts">
